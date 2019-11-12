@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TourGuyd</string>
+    <string name="MAPBOX_ACCESS_TOKEN">pk.eyJ1IjoiY2hyaXN0aWFuMTIiLCJhIjoiY2sydXkxeWNpMDA2YTNrbnl3OTEwNmMwYyJ9.9BVfmbh1igPrLc6QoAC8aQ</string>
 </resources>
