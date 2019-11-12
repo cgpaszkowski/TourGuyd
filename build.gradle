@@ -6,6 +6,8 @@ buildscript {
         google()
         jcenter()
 
+        //Mapbox additions
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
