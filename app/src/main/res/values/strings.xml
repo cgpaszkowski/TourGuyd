@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">TourGuyd</string>
     <string name="MAPBOX_ACCESS_TOKEN">pk.eyJ1IjoiY2hyaXN0aWFuMTIiLCJhIjoiY2sydXkxeWNpMDA2YTNrbnl3OTEwNmMwYyJ9.9BVfmbh1igPrLc6QoAC8aQ</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="tbRegister">Don\'t have an account?   Register</string>
+    <string name="bRegister">Register</string>
 </resources>

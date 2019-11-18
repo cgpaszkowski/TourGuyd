@@ -11,7 +11,7 @@ import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 
 
-class MainActivity : AppCompatActivity() {
+class MapActivity : AppCompatActivity() {
 
     private lateinit var mapView: MapView
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Mapbox.getInstance(applicationContext, "@String/MAPBOX_ACCESS_CODE")
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_map)
         mapView = findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync { mapboxMap ->
