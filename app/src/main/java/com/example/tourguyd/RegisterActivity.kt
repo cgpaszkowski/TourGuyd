@@ -2,6 +2,7 @@ package com.example.tourguyd
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -44,10 +45,16 @@ class RegisterActivity : AppCompatActivity() {
 
         auth.createUserWithEmailAndPassword(usernameRG.text.toString(), passwordRG.text.toString()).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
+
                     val user = auth.currentUser
-                    startActivity(Intent(this,LoginActivity::class.java))
-                    finish()
+                    user?.sendEmailVerification()
+                        ?.addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                // Sign in success, update UI with the signed-in user's information
+                                startActivity(Intent(this,LoginActivity::class.java))
+                                finish()
+                            }
+                    }
                 }
 
                 else {
