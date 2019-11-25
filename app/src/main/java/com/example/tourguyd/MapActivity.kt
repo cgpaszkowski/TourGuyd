@@ -17,7 +17,7 @@ class MapActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Mapbox.getInstance(applicationContext, "@String/MAPBOX_ACCESS_CODE")
+        Mapbox.getInstance(applicationContext, getString(R.string.MAPBOX_ACCESS_TOKEN))
 
         setContentView(R.layout.activity_map)
         mapView = findViewById(R.id.mapView)
