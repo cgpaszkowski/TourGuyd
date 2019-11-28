@@ -77,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
     private fun updateUI(currentUser : FirebaseUser?){
         if(currentUser != null) {
             if(currentUser.isEmailVerified){
-                startActivity(Intent(this,MapActivity::class.java))
+                startActivity(Intent(this,HomeActivity::class.java))
                 finish()
             }
             else {
