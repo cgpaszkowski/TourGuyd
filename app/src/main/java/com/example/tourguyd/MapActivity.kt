@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 class MapActivity : AppCompatActivity() {
 
     private lateinit var mapView: MapView
+    
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
