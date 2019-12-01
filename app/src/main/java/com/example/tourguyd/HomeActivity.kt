@@ -13,17 +13,16 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
 
+    // Access a Cloud Firestore instance from your Activity
+    val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // Access a Cloud Firestore instance from your Activity
-        val db = FirebaseFirestore.getInstance()
-
         rv_tours.layoutManager = LinearLayoutManager(this)
         rv_tours.setHasFixedSize(true)
-        val testData = createTestData(db)
+        val testData = createTestData()
         rv_tours.adapter = TourAdapter(testData, { tourItem : TourData -> tourItemClicked(tourItem) })
 
     }
@@ -33,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
         startActivity(Intent(this,MapActivity::class.java))
     }
 
-    private fun createTestData(db: FirebaseFirestore): List<TourData> {
+    private fun createTestData(): List<TourData> {
 
         val tourList = ArrayList<TourData>()
         val docRef = db.collection("landmarks").document("description")
