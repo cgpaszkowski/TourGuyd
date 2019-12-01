@@ -29,7 +29,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun tourItemClicked(tourItem : TourData) {
-        Toast.makeText(this, "Clicked: ${tourItem.itemName}", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Loading: ${tourItem.itemName}", Toast.LENGTH_LONG).show()
         startActivity(Intent(this,MapActivity::class.java))
     }
 
@@ -41,10 +41,10 @@ class HomeActivity : AppCompatActivity() {
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
-                    val cat = document.getString("category")?:""
-                    val name = document.getString("title")?:""
+                    val cat = document.get("category")?:""
+                    val name = document.get("title")?:""
 
-                    tourList.add(TourData("${document.getString("title")}", "${document.getString("category")}"))
+                    tourList.add(TourData(cat as String, "test"))
 
                     Log.d("Succeeded", "${document.getString("title")} => ${document.getString("category")}")
                 }
@@ -57,6 +57,13 @@ class HomeActivity : AppCompatActivity() {
         tourList.add(TourData("Museums", "Halifax's Most Popular Museums"))
         tourList.add(TourData("Must Sees", "Tourist Hotspots"))
         tourList.add(TourData("Parks", "Enjoy the Beautiful Outdoors"))
+        tourList.add(TourData("Must Sees", "All Things Food!"))
+        tourList.add(TourData("Must Sees", "Maritime Music!"))
+        tourList.add(TourData("Parks", "Get in the Water Harbour Tour"))
+        tourList.add(TourData("Museums", "Spooky Ghost Tour"))
+        tourList.add(TourData("Must Sees", "Brewery Tours!"))
+        tourList.add(TourData("Landmarks", "Tour One Or All Of Our Campuses"))
+
 
         return tourList
     }

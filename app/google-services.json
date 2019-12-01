@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "875191404125-todhdkut514l0f3hvtkja4jthouhv2uo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tourguyd",
+            "certificate_hash": "30fe84f44f6a2eea8eab3b35f2863e50b39ddd45"
+          }
+        },
+        {
           "client_id": "875191404125-q1jqsd7o1civkm2gcbttuccdmucbu9kc.apps.googleusercontent.com",
           "client_type": 3
         }
