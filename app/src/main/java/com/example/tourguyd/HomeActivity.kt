@@ -43,7 +43,7 @@ class HomeActivity : AppCompatActivity() {
                     val cat = document.get("category")?:""
                     val name = document.get("title")?:""
 
-                    tourList.add(TourData(cat as String, "test"))
+                    //tourList.add(TourData(cat as String, "test"))
 
                     Log.d("Succeeded", "${document.getString("title")} => ${document.getString("category")}")
                 }

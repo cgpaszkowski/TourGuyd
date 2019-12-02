@@ -4,18 +4,28 @@ import android.os.Bundle
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.MapView
 import com.mapbox.mapboxsdk.maps.MapboxMap
-import com.mapbox.mapboxsdk.maps.OnMapReadyCallback
 import com.mapbox.mapboxsdk.maps.Style
-
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
+import com.mapbox.android.core.permissions.PermissionsListener
+import com.mapbox.android.core.permissions.PermissionsManager
+import com.mapbox.mapboxsdk.maps.OnMapReadyCallback
 
 
-class MapActivity : AppCompatActivity() {
+class MapActivity : AppCompatActivity(), PermissionsListener, OnMapReadyCallback {
+    override fun onExplanationNeeded(permissionsToExplain: MutableList<String>?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
+    override fun onPermissionResult(granted: Boolean) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onMapReady(mapboxMap: MapboxMap) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    private var permissionsManager: PermissionsManager = PermissionsManager(this)
     private lateinit var mapView: MapView
-    
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +40,6 @@ class MapActivity : AppCompatActivity() {
 
             }
         }
-
-
     }
 
     public override fun onStart() {
@@ -68,6 +76,5 @@ class MapActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         mapView.onSaveInstanceState(outState)
     }
-
 
 }

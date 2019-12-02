@@ -21,7 +21,6 @@ class TourAdapter (val tourItemList: List<TourData>, val clickListener: (TourDat
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         // Populate ViewHolder with data that corresponds to the position in the list
-        // which we are told to load
         (holder as tourViewHolder).bind(tourItemList[position], clickListener)
     }
 
@@ -29,8 +28,8 @@ class TourAdapter (val tourItemList: List<TourData>, val clickListener: (TourDat
 
     class tourViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(tour: TourData, clickListener: (TourData) -> Unit) {
-            itemView.tv_part_item_name.text = tour.itemName
-            itemView.tv_part_id.text = tour.category.toString()
+            itemView.textview_tour_title.text = tour.itemName
+            itemView.textview_tour_category.text = tour.category.toString()
             itemView.setOnClickListener { clickListener(tour) }
         }
     }
