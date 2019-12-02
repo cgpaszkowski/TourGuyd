@@ -30,6 +30,7 @@ https://git.cs.dal.ca/christian/tour-guyd
 
 
 #Abstract
+
 The Tour Guy’d application for android mobile devices is designed for users who like to travel and explore new destinations. When a traveler visits a new city, they need to do a lot of research on a host of different websites in order to find the most popular activities and attractions. When those points of interest include tour guides, that adds yet another obstacle as they must also plan their times accordingly, especially during the off-season. Tour Guy’d takes all those concerns and provides users a simple on-the-go experience that provides a list of popular attractions and creates a tour that the user can follow on their own mobile device, no additional planning necessary. All the user needs to do is login, browse the selection of tours, and follow the map around the city.
 Completion Report
 Now that we have reached the end of the final stage of this project, it is fair to say that the final product was not the desired outcome. Much of the planned functionality that would make this application standout and be successful in the public marketplace was either not implemented at all or not in a manner that would maintain and grow a user base. 
